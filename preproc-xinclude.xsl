@@ -7,4 +7,12 @@
       <xsl:apply-templates select="@* | node()"/>
     </xsl:copy>
   </xsl:template>
+  <xsl:template match="inherit">
+      <xsl:copy>
+        <xsl:apply-templates select="@* | node()"/>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude">
+            <xsl:attribute name="href">../inherit/<xsl:value-of select="@id"/>.xml</xsl:attribute>
+        </xi:include>
+      </xsl:copy>
+  </xsl:template>
 </xsl:stylesheet>
