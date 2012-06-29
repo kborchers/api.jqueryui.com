@@ -127,6 +127,7 @@
 		</event>
 	</events>
 	<methods>
+		<inherit id="widget.xml" type="additional" />
 		<method name="destroy">
 			<desc>
 				Remove the accordion functionality completely. This will return the element back to its pre-init state.
